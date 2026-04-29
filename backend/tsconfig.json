@@ -10,7 +10,8 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "noEmitOnError": false
   },
   "exclude": ["prisma"]
 }
