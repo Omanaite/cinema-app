@@ -8,9 +8,5 @@ export const SeatsContext = createContext({
     backSeatsCount: 0,
     seatIds: []
   },
-  setSeatObject: React.Dispatch<React.SetStateAction<{
-    front: number;
-    middle: number;
-    back: number;
-}>> 
+setSeatObject: (_: any) => {}
 });
