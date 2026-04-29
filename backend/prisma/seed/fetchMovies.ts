@@ -75,7 +75,7 @@ export async function fetchNowPlayingMovies(): Promise<void> {
             title: movie.title,
             backdropPath: details.backdrop_path,
             posterPath: details.poster_path,
-            releaseDate: new Date(movie.release_date),
+            releaseDate: new Date(movie.release_date || '1970-01-01'),
             runtime: details.runtime,
             voteAverage: details.vote_average,
             overview: movie.overview,
