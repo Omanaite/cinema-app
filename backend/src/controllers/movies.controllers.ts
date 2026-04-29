@@ -120,7 +120,7 @@ export const getNowPlayingMoviesController = async (
   res: Response,
   next: NextFunction
 ) => {
-  const genreIds = req.query.genres as string;
+  const genreIds = (req.query.genres as string) || '0';
   const genreArray = genreIds.split('-').map(id => Number(id));
   if (genreArray[0] === 0 && genreArray.length === 1) {
     const movies = await prisma.movie.findMany({
